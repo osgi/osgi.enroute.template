@@ -1,0 +1,7 @@
+-runfw:org.eclipse.osgi;version='[3.9.1.v20130814-1242,3.9.1.v20130814-1242]'
+-runee:JavaSE-1.8
+-resolve: auto
+
+-runproperties: osgi.console.enable.builtin=false, osgi.console=
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.template)'

@@ -1,0 +1,10 @@
+Bundle-Version:1.0.0.${tstamp}
+Bundle-Description: 				\
+	${warning;Replace this comment with a description of what this bundles}
+
+Private-Package: \
+	osgi.enroute.template
+	
+-buildpath: \
+	osgi.enroute.base.api;version=1.0
+
