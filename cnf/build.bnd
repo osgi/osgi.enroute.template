@@ -1,37 +1,3 @@
-
 #
-# This file is empty because it is based on defaults. You can see the actual settings
-# with 'bnd debug' when in a project directory.
+# This file is left open for you to define your macros
 #
-
--pluginpath:\
-        ${build}/cache/aQute.jpm.bndrepo.jar;url=file:/Ws/aQute.jpm/aQute.jpm.bndrepo/generated/aQute.jpm.bndrepo.jar , \
-        ${build}/cache/biz.aQute.repository.jar;url=file:/Ws/bnd/biz.aQute.repository/generated/biz.aQute.repository.jar
-
-
--plugin:  \
-\
-        aQute.bnd.deployer.repository.wrapper.Plugin; \
-            location            =	"${build}/cache/wrapper"; \
-            reindex				=	true, \
-\
-        aQute.library.bnd.JpmRepository; \
-	        includeStaged   	=       true; \
-	        name                =       Central; \
-	        location            =       ~/.bnd/shacache; \
-	        index               =       ${build}/repository.json, \
-\
-        aQute.lib.deployer.FileRepo; \
-            name                =       'Assemblies' ; \
-            location            =       ${build}/assemblies
-
-
--releaserepo: Central
-
-#
-# Source and target compatibility
-#
-
-javac.source = ${ide;javac.source}
-javac.target = ${ide;javac.target}
-
