@@ -1,13 +1,19 @@
+#
+# _STEM_
+#
+
 Bundle-Version:1.0.0.${tstamp}
+
 Bundle-Description: 				\
-	${warning;Replace this comment with a description of what this bundles does}
+	This project contains a complete example with API, provider, and JUnit test code. \
+	\
+	${warning;Replace this comment with a description of what this bundle actually does}
 
 	
 -buildpath: \
 	osgi.enroute.base.api;version=1.0, \
-	osgi.enroute.testing.support;version=1.0 \
-	
-
+	osgi.enroute.testing.support;version=1.0, \
+	biz.aQute.junit
 
 -sub:  \
 	*.bnd

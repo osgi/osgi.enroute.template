@@ -2,3 +2,8 @@ Export-Package:  \
 	_package_.api
 Private-Package:  \
 	_package_.provider
+	
+
+Require-Capability: osgi.extender;osgi.extender=ds;effective:=active
+
+-includeresource: {readme.md}

@@ -1,13 +1,22 @@
+#
+# _STEM_
+#
+
 Bundle-Version:1.0.0.${tstamp}
 Bundle-Description: 				\
-	${warning;Replace this comment with a description of what this api bundles does}
+	This is an API project. An API project should in general not contain any \
+	implementation code.\
+	\
+	${warning;Please replace this comment with a description of what this api  does}
 
 	
 Export-Package:  \
-	_package_
+	_package_;provide:=true
 
 
 -buildpath: \
 	osgi.enroute.base.api;version=1.0
 	
 
+-includeresource: \
+	{readme.md}

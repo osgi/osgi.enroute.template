@@ -1,0 +1,5 @@
+Private-Package:  \
+	_package_.command
+	
+	
+-includeresource: {readme.md}

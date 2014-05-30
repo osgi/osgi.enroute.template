@@ -1,14 +1,29 @@
 Bundle-Version:1.0.0.${tstamp}
-Bundle-Description: 				\
-	${warning;Replace this comment with a description of what this bundles does}
+Bundle-Description: \
+ 	This bundle is an OSGi test bundle that tests the enRoute Blog Manager API. Projects\
+ 	that provide this API should configure their bnd.bnd file to run this test so that\
+ 	the providers can test their conformance. This bundle requires DSTest to run so this\
+ 	bundle should be included. \
+ 	\
+ 	${warning;Replace this comment with a description of what this bundles does}
 
-	
--buildpath: \
-	osgi.enroute.base.api;version=1.0, \
-	osgi.enroute.testing.support;version=1.0 \
-	
+
+Private-Package:  \
+	_package_
 
 Test-Cases: ${testcases}
 
-Private-Package:  \
-	_test_
+
+-includeresource: {readme.md}
+
+-buildpath:  \
+	osgi.enroute.base.api;version=1.0,\
+	biz.aQute.junit
+	
+-runrequires: 	\
+	osgi.identity;filter:='(osgi.identity=_test_.api)',\
+	osgi.identity;filter:='(osgi.identity=_test_.provider)',\
+
+
+-runfw: org.eclipse.osgi
+-runee: JavaSE-1.8

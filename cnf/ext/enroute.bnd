@@ -4,6 +4,8 @@
 # This file contains the setup for OSGi enRoute
 #
 
+#
+# Access to the 
 -pluginpath:\
         ${build}/cache/biz.aQute.repository.jar;url=file:${build}/biz.aQute.repository.jar
 
@@ -25,7 +27,7 @@
             location            =       ${build}/assemblies
 
 
--releaserepo: Central
+-releaserepo: 			Central
 
 javac.source = 			1.8
 javac.target = 			1.8
@@ -33,4 +35,4 @@ javac.target = 			1.8
 Service-Component: 		*
 -dsannotations: 		*
 
-testcases: 				${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+testcases: 				${classes;NAMED;*Test}
