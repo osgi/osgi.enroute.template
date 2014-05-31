@@ -4,8 +4,6 @@
 # This file contains the setup for OSGi enRoute
 #
 
--include: ../build.properties
-
 bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles
 
  
