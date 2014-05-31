@@ -11,13 +11,13 @@ import _package_.api._stem_;
  * through a Gogo command.
  * 
  */
-@Component(service=_stem_Command.class, property = { Debug.COMMAND_SCOPE + "=say",
-		Debug.COMMAND_FUNCTION + "=say" })
+@Component(service=_stem_Command.class, property = { Debug.COMMAND_SCOPE + "=_cmd_",
+		Debug.COMMAND_FUNCTION + "=_cmd_" })
 public class _stem_Command {
 	
 	private _stem_ target;
 
-	public void say(String message) {
+	public void _cmd_(String message) {
 		target.say(message);
 	}
 

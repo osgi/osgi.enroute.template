@@ -1,4 +1,4 @@
-# _api_
+# _PROJECT_
 
 ${Bundle-Description}
 

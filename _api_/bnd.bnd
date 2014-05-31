@@ -1,13 +1,13 @@
 #
-# _STEM_
+# _PROJECT_
 #
 
 Bundle-Version:1.0.0.${tstamp}
 Bundle-Description: 				\
-	This is an API project. An API project should in general not contain any \
+	This is _PROJECT_ project. An API project should in general not contain any \
 	implementation code.\
 	\
-	${warning;Please replace this comment with a description of what this api  does}
+	${warning;Please update this Bundle-Description in bnd.bnd}
 
 	
 Export-Package:  \

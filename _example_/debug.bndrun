@@ -1,4 +1,8 @@
--include: ~_example_.bndrun
+#
+# _PROJECT_	DEBUG LAUNCH SPECFICATION 
+#
+
+-include: ~_project_.bndrun
 
 -runrequires.debug:  \
 	osgi.identity;filter:='(osgi.identity=aQute.xray.plugin)',\
@@ -8,7 +12,7 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)', \
 	osgi.identity;filter:='(osgi.identity=osgi.base.debug.provider)',\
-	osgi.identity;filter:='(osgi.identity=_example_.command)'
+	osgi.identity;filter:='(osgi.identity=_project_.command)'
 
 -runtrace: true
 
@@ -19,8 +23,8 @@
 
 
 -runbundles:  \
-	_example_.provider;version=latest,\
-	_example_.command;version=latest,\
+	_project_.provider;version=latest,\
+	_project_.command;version=latest,\
 	aQute.xray.plugin;version='[1.7.0,1.7.1)',\
 	biz.aQute.bnd.annotation;version='[2.3.0,2.3.1)',\
 	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\

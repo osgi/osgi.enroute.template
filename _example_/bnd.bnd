@@ -1,13 +1,12 @@
 #
-# _STEM_
+# _PROJECT_ DEFAULTS
 #
 
-Bundle-Version:1.0.0.${tstamp}
-
+Bundle-Version:					1.0.0.${tstamp}
 Bundle-Description: 				\
 	This project contains a complete example with API, provider, and JUnit test code. \
 	\
-	${warning;Replace this comment with a description of what this bundle actually does}
+	${warning;Please update this Bundle-Description in bnd.bnd}
 
 	
 -buildpath: \
