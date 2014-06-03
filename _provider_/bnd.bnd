@@ -10,6 +10,9 @@ Bundle-Description: 				\
 	\
 	${warning;Please update this Bundle-Description in bnd.bnd}
 
+Export-Package:  \
+	_package_.api;provide:=true
+
 Private-Package:  \
 	_package_.provider
 	
@@ -17,10 +20,6 @@ Private-Package:  \
 	osgi.enroute.base.api;version=1.0, \
 	osgi.enroute.testing.support;version=1.0, \
 	biz.aQute.junit
-
-Export-Package:  \
-	_package_.api;provide:=true
-
 
 -includeresource: {readme.md}
 

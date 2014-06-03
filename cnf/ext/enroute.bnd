@@ -28,21 +28,25 @@ bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBui
             location            =       ${build}/release
 
 
--releaserepo: 			Release
--baselinerepo:			Central
-
-javac.source: 			1.8
-javac.target: 			1.8
-
-Service-Component: 		*
--dsannotations: 		*
--runfw:					org.eclipse.osgi;version=@3.9.1
--runee:					JavaSE-1.8
--runproperties: 		osgi.console.enable.builtin=false, osgi.console=
--runsystempackages.eqnx:javax.script
+-releaserepo: 					Release
+javac.source: 					1.8
+javac.target: 					1.8
+Service-Component: 				*
+-dsannotations: 				*
+-runee:							JavaSE-1.8
 
 
-test-cases: 			${classes;NAMED;*Test}
+-runfw:							org.eclipse.osgi;version=@3.9.1
+-runproperties: 				\
+								osgi.console.enable.builtin=false, \
+								osgi.console=, \
+								org.osgi.service.http.port=8080
+
+-runsystempackages.eqnx:		javax.script
+-runsystemcapabilities.dflt: 	${native_capability}
+
+
+test-cases: 					${classes;NAMED;*Test}
 
 debug-bundles: \
 	osgi.identity;filter:='(osgi.identity=aQute.xray.plugin)',\
@@ -52,5 +56,5 @@ debug-bundles: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)', \
 	osgi.identity;filter:='(osgi.identity=osgi.base.debug.provider)'
-
+	
 	

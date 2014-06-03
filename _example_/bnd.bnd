@@ -9,10 +9,10 @@ Bundle-Description: 				\
 	${warning;Please update this Bundle-Description in bnd.bnd}
 
 	
--buildpath: \
-	osgi.enroute.base.api;version=1.0, \
-	osgi.enroute.testing.support;version=1.0, \
-	biz.aQute.junit
+-buildpath:  \
+	osgi.enroute.base.api;version=1.0,\
+	biz.aQute.junit, \
+	osgi.logger.provider;version=1.0	
 
 -sub:  \
 	*.bnd

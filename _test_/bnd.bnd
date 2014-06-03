@@ -25,4 +25,4 @@ Test-Cases: ${test-cases}
 	biz.aQute.junit
 	
 -runbundles: \
-	_project_
+	_test_

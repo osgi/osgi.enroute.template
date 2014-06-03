@@ -2,29 +2,15 @@
 # _PROJECT_	DEBUG LAUNCH SPECFICATION 
 #
 
--include: ~_project_.bndrun
+-include: ~_pid_.bndrun
 
 -runrequires.debug:  \
-	osgi.identity;filter:='(osgi.identity=aQute.xray.plugin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)', \
-	osgi.identity;filter:='(osgi.identity=osgi.base.debug.provider)',\
-	osgi.identity;filter:='(osgi.identity=_project_.command)'
+	${debug-bundles}
 
 -runtrace: true
 
--runfw: org.eclipse.osgi
--runee: JavaSE-1.8
-
-
-
-
 -runbundles:  \
-	_project_.provider;version=latest,\
-	_project_.command;version=latest,\
+	_example_.provider;version=latest,\
 	aQute.xray.plugin;version='[1.7.0,1.7.1)',\
 	biz.aQute.bnd.annotation;version='[2.3.0,2.3.1)',\
 	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\

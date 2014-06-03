@@ -14,7 +14,8 @@ public interface _stem_ {
 	 * The interface is a minimal method.
 	 * 
 	 * @param message the message to say
+	 * @return true if the message could be spoken
 	 */
-	void say(String message);
+	boolean say(String message);
 
 }
