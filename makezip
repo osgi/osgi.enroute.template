@@ -1,0 +1,4 @@
+#!/bin/sh
+rm enroute.zip
+zip -r enroute.zip .gradle-wrapper .gitignore .travis.yml *
+
