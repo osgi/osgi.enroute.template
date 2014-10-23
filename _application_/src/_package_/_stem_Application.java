@@ -18,7 +18,4 @@ public class _stem_Application implements REST {
 		return string.toUpperCase();
 	}
 
-	public String _cmd_(String m) throws Exception {
-		return m;
-	}
 }
