@@ -43,50 +43,6 @@ Service-Component: 				*
 -dsannotations: 				*
 -runee:							JavaSE-1.8
 
-
-
-#
-# Required for testing, these packages are added
-# to the path by aQute.junit
-#
-
-_a = ${if;${def;-osgitest};junit-packages;undefined}
--runsystempackages.junit: ${def; ${_a}}
-
-
-junit-packages: \
-	junit.extensions; \
-	junit.framework; \
-	junit.runner; \
-	junit.textui;										version=3.8.2, \
-	org.hamcrest;\
-	org.hamcrest.core; \
-	org.hamcrest.internal;								version=4.11, \
-	org.junit;org.junit.experimental; \
-	org.junit.experimental.categories; \
-	org.junit.experimental.max; \
-  	org.junit.experimental.results; \
-  	org.junit.experimental.runners; \
-  	org.junit.experimental.theories; \
-  	org.junit.experimental.theories.internal; \
-  	org.junit.experimental.theories.suppliers; \
-	org.junit.internal; \
-	org.junit.internal.builders; \
-	org.junit.internal.matchers; \
-	org.junit.internal.requests; \
-	org.junit.internal.runners; \
-	org.junit.internal.runners.model; \
-	org.junit.internal.runners.rules; \
-	org.junit.internal.runners.statements; \
-	org.junit.matchers; \
-	org.junit.rules; \
-	org.junit.runner; \
-	org.junit.runner.manipulation; \
-	org.junit.runner.notification; \
-	org.junit.runners; \
-	org.junit.runners.model; version=4.11
-
-
 test-cases: 					${classes;NAMED;*Test}
 
 #
@@ -94,3 +50,5 @@ test-cases: 					${classes;NAMED;*Test}
 #
 
 -resolve.effective = resolve, active
+
+test-reports: test-results

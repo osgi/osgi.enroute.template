@@ -22,7 +22,9 @@ bnd-release	=	https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBui
     		depository.name		=		enRoute.rt
 
 -runfw:							org.eclipse.osgi;version=@3.9.1
--runproperties: 				\
+-runpath.eqnx:					osgi.enroute.equinox.log.adapter
+
+-runproperties.eqnx: 				\
 	org.apache.felix.http.jettyEnabled=true, \
 	org.apache.felix.http.whiteboardEnabled=true,\
 	osgi.console.enable.builtin=false, \
@@ -49,6 +51,7 @@ org.apache.felix.http.bundle: 		cap=osgi.enroute.whiteboard;osgi.enroute.whitebo
 	cap=osgi.service;objectClass=org.osgi.service.http.HttpService;effective:=active
 org.knopflerfish.bundle.useradmin: 	cap=osgi.service;objectClass=org.osgi.service.useradmin.UserAdmin;effective:=active
 org.eclipse.equinox.coordinator: 	cap=osgi.service;objectClass=org.osgi.service.coordinator.Coordinator;effective:=active
-org.apache.felix.scr:				cap=osgi.extender;osgi.extender=osgi.component;;version:Version=1.2.1;effective:=active
+org.apache.felix.scr:				cap=osgi.extender;osgi.extender=osgi.component;version:Version=1.2.1;effective:=active, \
+									cap=osgi.extender;osgi.extender=osgi.ds;version:Version=1.2.1;effective:=active
 
 	
